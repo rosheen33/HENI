@@ -43,16 +43,16 @@ Python 3.8 Required
     ```python
     python TASKS/data_task4.py
     ```
-##Definitions (Task4):
+
+
+## Definitions (Task4):
 **Question: Describe inner join, left join, right join, full join.**
 
-##Inner join: 
+## Inner join: 
 - Inner join returns only the matching rows between both the tables, non-matching rows are eliminated.
-##Left join: 
+## Left join: 
 - It joins two or more tables, returns all records from the left table, and matching rows from the right-hand table.
-##Right join: 
+## Right join: 
 - It is used to join two or more tables, returns all records from the right table, and matching rows from the left-hand table.
-##Full join: 
+## Full join: 
 - Full Join or Full Outer Join returns all rows from both the tables (left & right tables), including non-matching rows from both the tables.
-
-
