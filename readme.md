@@ -11,8 +11,8 @@ Python 3.8 Required
 - Scrapy version is just for demonstration purposes.
 - Run through following commands
     ```python
-    python TASKS/parsing_task1_with_lxml.py
-    python TASKS/parsing_task1_with_scrapy.py
+    python parsing_task1_with_lxml.py
+    python parsing_task1_with_scrapy.py
     ```
 
 ### 2 - Regex Task: 
@@ -20,7 +20,7 @@ Python 3.8 Required
 - Handled exceptions in case there is no match. 
 - Run through following command
     ```python
-    python TASKS/regex_task2.py
+    python regex_task2.py
     ```
 
 ### 3 - Scrapy Task: 
@@ -41,7 +41,7 @@ Python 3.8 Required
 - Used **pandassql** for this task specifically so we can test results locally without the need to install sql
 - Run through following command
     ```python
-    python TASKS/data_task4.py
+    python data_task4.py
     ```
 
 

@@ -20,46 +20,38 @@ def main():
     date_xpath = "//span[contains(@id,'SaleDate')]/text()"
 
     # parse artist name
-    name = html_etree.xpath(name_xpath)
-    if name:
+    if name := html_etree.xpath(name_xpath):
         name = re.sub(r"\(.*", "", name[0]).strip()
         item['artist'] = name
 
     # parse painting name
-    title = html_etree.xpath(title_xpath)
-    if title:
+    if title := html_etree.xpath(title_xpath):
         item['title'] = title[0]
 
     # parse price GBP
-    gbp_price = html_etree.xpath(gbp_xpath)
-    if gbp_price:
+    if gbp_price := html_etree.xpath(gbp_xpath):
         item['price_gpb'] = gbp_price[0].strip('GBP').replace(',', ' ')
 
     # parse price US
-    usd_price = html_etree.xpath(usd_xpath)
-    if usd_price:
+    if usd_price := html_etree.xpath(usd_xpath):
         item['price_usd'] = usd_price[0].strip('USD').replace(',', ' ')
 
     # parse price GBP est
-    price_est_gpb = html_etree.xpath(est_gbp_xpath)
-    if price_est_gpb:
+    if price_est_gpb := html_etree.xpath(est_gbp_xpath):
         if price_est_gpb := re.findall(r"[\d|,]+", price_est_gpb[0]):
             item['price_est_gpb'] = ", ".join([re.sub(",", " ", ss) for ss in price_est_gpb])
 
     # parse price US est
-    price_est_usd = html_etree.xpath(est_usd_xpath)
-    if price_est_usd:
+    if price_est_usd := html_etree.xpath(est_usd_xpath):
         if price_est_usd := re.findall(r"[\d|,]+", price_est_usd[0]):
             item['price_est_usd'] = ", ".join([re.sub(",", " ", ss) for ss in price_est_usd])
 
     # image link
-    image = html_etree.xpath(image_xpath)
-    if image:
+    if image := html_etree.xpath(image_xpath):
         item['image'] = image[0]
 
     # sale date
-    sel_date = html_etree.xpath(date_xpath)
-    if sel_date:
+    if sel_date := html_etree.xpath(date_xpath):
         sel_date = sel_date[0].replace(',', '').strip()
         item['sel_date'] = str(datetime.strptime(sel_date, "%d %B %Y").date())
 
