@@ -43,7 +43,6 @@ Python 3.8 Required
     ```python
     python TASKS/data_task4.py
     ```
-
 ##Definitions (Task4):
 **Question: Describe inner join, left join, right join, full join.**
 
